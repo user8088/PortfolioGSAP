@@ -22,6 +22,14 @@ html,body{
     src: url('./fonts/MonumentExtended-Regular.otf');
 }
 
+.intro{
+    background-image:linear-gradient(#ffffff98, 0, #120f0d46, #2d758f4f),  url("https://images.unsplash.com/photo-1724525647065-f948fc102e68?q=80&w=1932&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+
+}
 .intro h1{
     font-family: "Monument-Extended";
     font-size: 50px;
