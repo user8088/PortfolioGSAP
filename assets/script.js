@@ -10,6 +10,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const stickySection = document.querySelector(".steps");
     const stickyHeight = window.innerHeight * 7;
     const cards = document.querySelectorAll(".card");
+    const countContainer = document.querySelector(".count-container");
     const totalCards = cards.length;
   
     ScrollTrigger.create({
@@ -70,6 +71,8 @@ document.addEventListener("DOMContentLoaded", () => {
             if(entry.isIntersecting){
                 lastScrollY = window.scrollY;
                 let cardIndex = Array.from(cards).indexOf(entry.target);
+                currentCardIndex = cardIndex;
+                
                 const targetY= 150 - currentCardIndex * 150;
                 gsap.to(countContainer,{
                     y: targetY,
@@ -79,7 +82,13 @@ document.addEventListener("DOMContentLoaded", () => {
                 });
             }
         });
-    },options)
+    }, options);
+
+    cards.forEach((card)=>{
+        observer.observe(card);
+    });
+
+    window.addEventListener("resize", () => positionCards(0));
   });
 
 

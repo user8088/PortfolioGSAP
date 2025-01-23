@@ -107,7 +107,7 @@ html,body{
 
 .cards{
     position: absolute;
-    top: 20%;
+    top: 30%;
     left: 50%;
     transform: translate(-50%,-50%);
     width: 150vw;
@@ -118,7 +118,7 @@ html,body{
 .card{
     position: absolute;
     width: 500px;
-    height: 550px;
+    height: 300px;
     top:50%;
     left:50%;
     transform-origin: center center;
@@ -161,7 +161,7 @@ html,body{
 .count{
     position: relative;
     width: 1200px;
-    height: 100px;
+    height: 150px;
     clip-path:polygon(0 0, 100% 0, 100% 100%,0% 100% );
     overflow: hidden;
 }
@@ -182,12 +182,13 @@ html,body{
     color: #fff;
     text-transform: uppercase;
     font-family: "Monument-Extended";
-    font-size: 90px;
+    font-size: 150px;
     line-height: 1;
     letter-spacing: -0.04em;
     will-change: transform;
     letter-spacing: 2px;
 }
+
 
 .empty{
     opacity: 0;
@@ -215,16 +216,14 @@ html,body{
     }
 
     .counter-title{
-        height: 30px;
+        height: 50px;
     }
 
     .counter-title h1{
         font-size: 30px;
     }
 
-    .count-container h1{
-        font-size: 40px;
-    }
+
 
     .count{
         top: 0;
@@ -232,13 +231,12 @@ html,body{
     }
 
     .cards{
-        top: 20%;
+        top: 27.5%;
     }
 
     .card{
         width: 375px;
         height: 500px;
-        margin-left:-190px;
     }
     .outro p{
         font-size: 24px;
@@ -246,45 +244,3 @@ html,body{
    
 }
 
-@media(max-width: 360px){
-    .counter-title{
-        height: 30px;
-    }
-
-    .counter-title h1{
-        font-size: 30px;
-    }
-
-    .count-container h1{
-        font-size: 40px;
-    }
-
-    .count{
-        top: 0;
-        left: -10px;
-    }
-
-    .cards{
-        top: 20%;
-    }
-
-    .card{
-        width: 375px;
-        height: 400px;
-        margin-left:-170px;
-    }
-
-    .card-content p{
-        text-align: left;
-        color: #fff;
-        font-size: 12px;
-        line-height: 1.25;
-        font-family: 'Poppins';
-        font-weight: 200;
-        font-style: normal;
-    }
-    .outro p{
-        font-size: 24px;
-    }
-    
-}
