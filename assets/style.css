@@ -172,7 +172,7 @@ html,body{
 
 .count-container{
     position: relative;
-    transition: translateY(150px);
+    transform: translateY(150px);
     will-change: transform;
 }
 
