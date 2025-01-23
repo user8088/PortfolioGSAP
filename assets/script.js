@@ -57,5 +57,30 @@ document.addEventListener("DOMContentLoaded", () => {
   
     // Initial positioning of cards
     positionCards(0);
+
+    let currentCardIndex = 0;
+    const options = {
+        root: null,
+        rootMargin:"0% 0%",
+        threshold:0.5,
+    };
+
+    const observer = new IntersectionObserver((entries)=>{
+        entries.forEach((entry)=>{
+            if(entry.isIntersecting){
+                lastScrollY = window.scrollY;
+                let cardIndex = Array.from(cards).indexOf(entry.target);
+                const targetY= 150 - currentCardIndex * 150;
+                gsap.to(countContainer,{
+                    y: targetY,
+                    duration: 0.3,
+                    ease: "power1.out",
+                    overwrite: true,
+                });
+            }
+        });
+    },options)
   });
+
+
   
