@@ -8,13 +8,25 @@ document.addEventListener("DOMContentLoaded", () => {
     gsap.ticker.lagSmoothing(0);
   
     const stickySection = document.querySelector(".steps");
-    const stickyHeight = window.innerHeight * 7;
+    const stickySectionb = document.querySelector(".outro");
+    const stickyHeight = 1000;
     const cards = document.querySelectorAll(".card");
     const countContainer = document.querySelector(".count-container");
     const totalCards = cards.length;
   
     ScrollTrigger.create({
       trigger: stickySection,
+      start: "top top",
+      end: `+=${stickyHeight}px`,
+      pin: true,
+      pinSpacing: true,
+      onUpdate: (self) => {
+        positionCards(self.progress);
+      },
+    });
+
+    ScrollTrigger.create({
+      trigger: stickySectionb,
       start: "top top",
       end: `+=${stickyHeight}px`,
       pin: true,
