@@ -120,7 +120,7 @@ ScrollTrigger.create({
 
 // ScrollTrigger to reset the scale after leaving the next section
 ScrollTrigger.create({
-  trigger: ".motionstill-content", // Replace with the actual class or ID of the next section
+  trigger: ".hero", // Replace with the actual class or ID of the next section
   start: "bottom bottom", // Trigger when the next section's bottom leaves the viewport
   onEnter: () => {
     gsap.to(".revealer", {
