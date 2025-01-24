@@ -8,7 +8,6 @@
 
 html,body{
     width: 100vw;
-    height: 900vh;
     background-color: #000;
     color: #fff;
     font-family: Helvetica, sans-serif;
@@ -23,7 +22,7 @@ html,body{
 }
 
 .intro{
-    background-image:linear-gradient(#ffffff98, 0, #120f0d46, #2d758f4f),  url("https://images.unsplash.com/photo-1724525647065-f948fc102e68?q=80&w=1932&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+    background-image:linear-gradient(#ffffff98, 0, #120f0d46, #8f4e2d4f),  url("https://images.unsplash.com/photo-1643304187561-022272be30ca?q=80&w=1932&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -93,7 +92,7 @@ html,body{
     display: flex;
     justify-content: center;
     align-items: center;
-    background: linear-gradient(180deg, #000000, #364549);
+    background: linear-gradient(180deg, #000000, #fe79274a);
     background-size: 150% 150%;
 }
 
@@ -110,7 +109,7 @@ html,body{
 }
 
 .outro p span{
-    color: #75e1ff;
+    color: #fe7927;
 }
 
 .cards{
@@ -203,6 +202,149 @@ html,body{
 }
 
 
+
+
+/* Motion still */
+
+.motionstill-h1{
+    text-transform: uppercase;
+    font-family: 'Poppins';
+    font-weight: 400;
+    letter-spacing: -4px;
+    font-size: 200px;
+}
+
+
+
+.hero{
+    width: 100vw;
+    height: 100vh;
+    background-image: url('https://images.unsplash.com/photo-1636969350238-a678edbbbb67?q=80&w=1932&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero h1{
+    font-family: "Poppins";
+}
+
+
+.info{
+    width: 100vw;
+    height: 150vh;
+}
+
+.header-row{
+    width: 100%;
+    height: 250px;
+    padding: 0 2em;
+}
+
+.header-row:nth-child(1){
+    display: flex;
+    justify-content:flex-start;
+    align-items: center;
+}
+
+.header-row:nth-child(2){
+    display: flex;
+    justify-content:flex-end;
+    align-items: center;
+}
+
+.header-info{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.header-info p{
+    padding: 1em;
+    font-family: 'Poppins';
+    font-weight: 200;
+    font-size: 52px;
+}
+
+.header-images{
+    width: 100%;
+    height: 250px;
+    padding: 1em;
+    display: flex;
+    gap: 1em;
+}
+
+
+.pinned{
+    position: absolute;
+    top: 100vh;
+    width: 100%;
+    height: 250vh;
+    z-index: 2;
+}
+
+.whitespace{
+    position: relative;
+    width: 100%;
+    height: 300vh;
+    background-color: #000;
+    z-index: -1;
+}
+
+.revealer{
+    position: absolute;
+    transform: translate(-50%,0%);
+    left: 35%;
+    margin-top: 325px;
+    width: 120px;
+    height: 120px;
+}
+
+.revealer .revealer-1{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    clip-path: polygon(45% 0, 55% 0, 55% 100%, 45% 100%);
+}
+
+
+.revealer .revealer-2{
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: rotate(90deg);
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    clip-path: polygon(45% 0, 55% 0, 55% 100%, 45% 100%);
+}
+
+
+.motionstill-content{
+    position: relative;
+    width: 100%;
+    height: 150vh;
+    background-color: #fff;
+    z-index: 10;
+}
+
+.motionstill-content h1{
+    font-size: 72px;
+    letter-spacing: 0;
+    color: #000;
+    padding: 5px;
+}
+
+
 @media(max-width: 900px){
     .intro h1{
         font-family: "Monument-Extended";
@@ -249,6 +391,42 @@ html,body{
     .outro p{
         font-size: 24px;
     }
+
+    .hero h1{
+        font-family: "Poppins";
+        font-size: 50px;
+    }
+
+    .motionstill-h1{
+        text-transform: uppercase;
+        font-family: 'Poppins';
+        font-weight: 400;
+        letter-spacing: -4px;
+        font-size:70px;
+    }
+
+
+    .motionstill-content h1{
+        font-size: 30px;
+        letter-spacing: 0;
+        color: #000;
+        
+    }
+
+   
+
+
+    .revealer{
+        position: absolute;
+        transform: translate(-50%,0%);
+        left: 35%;
+        margin-top: 200px;
+        width: 120px;
+        height: 120px;
+    }
+
+    .header-info p{
+        font-size: 20px;
+    }
    
 }
-
