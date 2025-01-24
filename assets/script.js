@@ -103,19 +103,34 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
     ScrollTrigger.create({
-      trigger:".whitespace",
+      trigger: ".whitespace",
       start: "top 50%",
       end: "bottom bottom",
       scrub: 1,
-      onUpdate: (self)=>{
+      onUpdate: (self) => {
         const scale = 1 + 12 * self.progress;
-        gsap.to(".revealer",{
+        gsap.to(".revealer", {
           scale: scale,
           ease: "none",
           duration: 0,
         });
       },
+      onLeave: () => {
+        gsap.to(".revealer", {
+          scale: 1, // Reset scale when leaving the section
+          ease: "none",
+          duration: 0.3,
+        });
+      },
+      onEnterBack: () => {
+        gsap.to(".revealer", {
+          scale: 1, // Reset scale when re-entering the section
+          ease: "none",
+          duration: 0.3,
+        });
+      },
     });
+    
 
 
   
